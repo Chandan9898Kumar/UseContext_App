@@ -14,12 +14,12 @@ const Home = () => {
     }));
     // to generate same time of data
     faker.seed(20);
-    const [products] = useState(productsArray)
+    const [Products] = useState(productsArray)
     const [cart, setCart] = useState([])
     console.log(cart, 'cart')
     return (
         <div className='productContainer'>
-            {products.map((prod) => (
+            {Products.map((prod) => (
                 <SingleProduct products={prod} cart={cart} setCart={setCart} />
             ))}
 
