@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Contextjs from './Context'
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// we put the App inside Contextjs componenet so that Data of Contextjs can be accessed by all
+// components of App.
 root.render(
   <React.StrictMode>
-    <App />
+    <Contextjs> 
+       <App />
+  </Contextjs>
   </React.StrictMode>
 );
 
